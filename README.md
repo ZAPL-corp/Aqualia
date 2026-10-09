@@ -1,2 +1,4 @@
 # Aqualia
-So fast and more perfomances browser for low RAM PC and for more functionals!
+
+> [!WARNING]
+> The project is under constant development, so bugs and other issues are possible!
