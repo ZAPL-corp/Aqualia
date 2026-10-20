@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Aqualia",
+  "version": "1.0.110",
+  "description": "Очистка браузера и блокировка рекламы.",
+  "permissions": [
+    "browsingData",
+    "tabs",
+    "storage",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "aqualia_ads",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "action": {
+    "default_title": "Aqualia",
+    "default_popup": "popup.html"
+  }
+}
