@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aqualia — Установка расширения</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        mdSurface: '#111318',
+                        mdSurfaceContainer: '#191c20',
+                        mdSurfaceContainerHigh: '#20242c',
+                        mdSurfaceContainerHighest: '#2b303b',
+                        mdPrimary: '#a8c7fa',
+                        mdOnPrimary: '#003062',
+                        mdPrimaryContainer: '#004a77',
+                        mdOnPrimaryContainer: '#d1e4ff',
+                        mdOutline: '#8e9099',
+                        mdText: '#e3e2e6',
+                        mdTextMuted: '#c4c6d0'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111318;
+            color: #e3e2e6;
+        }
+        /* Custom smooth scroll */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111318;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3c4048;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #5a5e69;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-blue-700 selection:text-white">
+
+    <!-- Material You Top App Bar -->
+    <header class="w-full bg-[#111318]/80 backdrop-blur-md sticky top-0 z-50 border-b border-[#2b303b]/40">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3.5">
+                <div class="w-11 h-11 rounded-2xl bg-mdPrimaryContainer flex items-center justify-center text-mdOnPrimaryContainer shadow-sm">
+                    <i data-lucide="droplets" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <div class="flex items-center space-x-1.5">
+                        <span class="font-bold text-lg text-mdText tracking-tight">Aqualia</span>
+                        <i data-lucide="badge-check" class="w-4 h-4 text-mdPrimary fill-mdPrimary/20"></i>
+                    </div>
+                    <span class="text-xs text-mdTextMuted">Android 16 Edition</span>
+                </div>
+            </div>
+
+            <!-- Header Action -->
+            <a href="https://github.com/ZAPL-corp/Aqualia/releases/latest/download/aqualia.crx" 
+               class="inline-flex items-center space-x-2 bg-mdPrimary hover:bg-blue-300 text-mdOnPrimary font-medium px-5 py-2.5 rounded-full text-sm shadow-md transition transform active:scale-95">
+                <i data-lucide="download" class="w-4 h-4"></i>
+                <span>Скачать .crx</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Hero & Content Section -->
+    <main class="flex-grow max-w-4xl mx-auto px-6 py-12 w-full space-y-8">
+        
+        <!-- Hero Card (Material You Tonal Surface) -->
+        <div class="bg-mdSurfaceContainerHigh rounded-[32px] p-8 sm:p-12 shadow-2xl relative overflow-hidden border border-white/5">
+            <div class="absolute -right-16 -top-16 w-64 h-64 bg-mdPrimary/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8 relative z-10">
+                <!-- Large Glowing Icon -->
+                <div class="relative flex-shrink-0">
+                    <div class="absolute inset-0 bg-mdPrimary/20 rounded-[32px] blur-xl animate-pulse"></div>
+                    <div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-[32px] bg-mdSurfaceContainerHighest flex items-center justify-center text-mdPrimary shadow-inner border border-white/10">
+                        <i data-lucide="droplets" class="w-14 h-14"></i>
+                    </div>
+                </div>
+
+                <!-- Hero Information -->
+                <div class="flex-grow text-center md:text-left">
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-3">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-mdPrimaryContainer text-mdOnPrimaryContainer">Расширение</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/60 text-emerald-300 border border-emerald-800/40">v1.0.110 (Последняя)</span>
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-mdSurfaceContainerHighest text-mdTextMuted">Безопасно</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-mdText tracking-tight mb-3">
+                        Aqualia для Chrome
+                    </h1>
+                    <p class="text-mdTextMuted text-sm sm:text-base leading-relaxed mb-6 max-w-xl">
+                        Инновационное расширение в чистом стиле Android 16 Material You. Удобный контроль водных привычек, премиальная тёмная эстетика и мгновенный доступ прямо из панели браузера.
+                    </p>
+
+                    <!-- CTA Installation Button -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                        <a href="https://github.com/ZAPL-corp/Aqualia/releases/download/1.0.110/aqualia.crx" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-mdPrimary hover:bg-blue-300 text-mdOnPrimary font-semibold px-8 py-4 rounded-full shadow-lg transition transform hover:scale-[1.02] active:scale-95 text-base">
+                            <i data-lucide="download-cloud" class="w-5 h-5"></i>
+                            <span>Установить Aqualia</span>
+                        </a>
+                        <span class="text-xs text-mdTextMuted text-center sm:text-left">
+                            Прямая ссылка на релиз GitHub<br>Файл: <code class="text-mdPrimary">aqualia.crx</code>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid (Material You Cards) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-mdSurfaceContainer rounded-[24px] p-6 border border-white/5 hover:bg-mdSurfaceContainerHigh transition">
+                <div class="w-12 h-12 rounded-2xl bg-mdPrimaryContainer text-mdOnPrimaryContainer flex items-center justify-center mb-4">
+                    <i data-lucide="palette" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-bold text-mdText text-base mb-2">Android 16 Дизайн</h3>
+                <p class="text-xs text-mdTextMuted leading-relaxed">Плавные закругления, динамические цвета и изысканный интерфейс в духе Material You.</p>
+            </div>
+
+            <div class="bg-mdSurfaceContainer rounded-[24px] p-6 border border-white/5 hover:bg-mdSurfaceContainerHigh transition">
+                <div class="w-12 h-12 rounded-2xl bg-mdPrimaryContainer text-mdOnPrimaryContainer flex items-center justify-center mb-4">
+                    <i data-lucide="zap" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-bold text-mdText text-base mb-2">Мгновенный отклик</h3>
+                <p class="text-xs text-mdTextMuted leading-relaxed">Максимальная производительность и высокая скорость работы без задержек и лишнего веса.</p>
+            </div>
+
+            <div class="bg-mdSurfaceContainer rounded-[24px] p-6 border border-white/5 hover:bg-mdSurfaceContainerHigh transition">
+                <div class="w-12 h-12 rounded-2xl bg-mdPrimaryContainer text-mdOnPrimaryContainer flex items-center justify-center mb-4">
+                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+                </div>
+                <h3 class="font-bold text-mdText text-base mb-2">Безопасно и открыто</h3>
+                <p class="text-xs text-mdTextMuted leading-relaxed">Полностью проверенный релиз с официального репозитория GitHub ZAPL-corp.</p>
+            </div>
+        </div>
+
+        <!-- Installation Instructions Card -->
+        <div class="bg-mdSurfaceContainer rounded-[32px] p-8 border border-white/5">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-mdPrimaryContainer text-mdOnPrimaryContainer flex items-center justify-center">
+                    <i data-lucide="help-circle" class="w-5 h-5"></i>
+                </div>
+                <h2 class="text-xl font-bold text-mdText">Инструкция по установке .crx файла</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-mdSurfaceContainerHighest text-mdPrimary font-bold flex items-center justify-center text-sm">1</div>
+                    <h4 class="font-semibold text-sm text-mdText">Скачайте файл</h4>
+                    <p class="text-xs text-mdTextMuted">Нажмите кнопку «Установить» выше для загрузки архива релиза <code class="text-mdPrimary">aqualia.crx</code>.</p>
+                </div>
+                <div class="space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-mdSurfaceContainerHighest text-mdPrimary font-bold flex items-center justify-center text-sm">2</div>
+                    <h4 class="font-semibold text-sm text-mdText">Откройте расширения</h4>
+                    <p class="text-xs text-mdTextMuted">Введите в адресной строке браузера <code class="bg-mdSurfaceContainerHighest px-1.5 py-0.5 rounded text-mdPrimary">chrome://extensions</code> и перейдите на страницу.</p>
+                </div>
+                <div class="space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-mdSurfaceContainerHighest text-mdPrimary font-bold flex items-center justify-center text-sm">3</div>
+                    <h4 class="font-semibold text-sm text-mdText">Включите режим и перетащите</h4>
+                    <p class="text-xs text-mdTextMuted">Включите тумблер «Режим разработчика» справа вверху и перетащите скачанный <code class="text-mdPrimary">.crx</code> файл на страницу.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-[#2b303b]/40 py-6 text-center text-xs text-mdTextMuted bg-mdSurfaceContainer">
+        <p>&copy; 2026 ZAPL-corp Aqualia. Создано в стилистике Android 16 Material You.</p>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
